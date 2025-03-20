@@ -1,48 +1,63 @@
-<footer class="bg-light text-center text-lg-start mt-4">
-<div class="container p-4">
-<div class="row">
-<!-- Cột thông tin liên hệ -->
-<div class="col-lg-6 col-md-12 mb-4">
-<h5 class="text-uppercase">Quản lý sản phẩm</h5>
-<p>
-Hệ thống quản lý sản phẩm giúp bạn theo dõi và cập nhật thông tin
-
-sản phẩm dễ dàng.
-</p>
-</div>
-<!-- Cột liên kết nhanh -->
-<div class="col-lg-3 col-md-6 mb-4">
-<h5 class="text-uppercase">Liên kết nhanh</h5>
-<ul class="list-unstyled mb-0">
-<li><a href="/webbanhang/Product/" class="text-dark">Danh sách sản
-
-phẩm</a></li>
-
-<li><a href="/webbanhang/Product/add" class="text-dark">Thêm sản
-
-phẩm</a></li>
-</ul>
-</div>
-<!-- Cột mạng xã hội -->
-<div class="col-lg-3 col-md-6 mb-4"></div>
-<h5 class="text-uppercase">Kết nối với chúng tôi</h5>
-
-<a href="#" class="text-dark mr-3"><i class="fab fa-facebook-
-f"></i></a>
-
-<a href="#" class="text-dark mr-3"><i class="fab fa-twitter"></i></a>
-
-<a href="#" class="text-dark mr-3"><i class="fab fa-
-instagram"></i></a>
-
-</div>
-</div>
-</div>
-<!-- Dòng bản quyền -->
-<div class="text-center p-3 bg-dark text-white">
-© 2025 Quản lý sản phẩm. All rights reserved.
-</div>
+<footer>
+    <div class="footer-container mx-auto">
+        <div class="footer-help">
+        <h5>Tổng đài hỗ trợ miễn phí</h5>
+       <ul>
+            <li><strong>Mua hàng - bảo hành:</strong> 1800.2097 (7h30 - 22h00)</li>
+            <li><strong>Khiếu nại:</strong> 1800.2063 (8h00 - 21h30)</li>
+       </ul>
+       <h5>Phương thức thanh toán</h5>
+       <div class="footer-payment">
+            <img src="https://cdn2.cellphones.com.vn/x35,webp/media/wysiwyg/apple-pay-og.png" alt="">
+            <img src="https://cdn2.cellphones.com.vn/x35,webp/media/logo/payment/vnpay-logo.png" alt="">
+            <img src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/momo_1.png" alt="">
+            <img src="https://cdn2.cellphones.com.vn/x35,webp/media/logo/payment/zalopay-logo.png" alt="">
+       </div>
+        </div>
+        <div class="footer-information">
+            <h5>Thông tin và chính sách</h5>
+            <ul>
+                <li>Mua hàng và thanh toán Online</li>
+                <li>Mua hàng trả góp Online</li>
+                <li>Mua hàng trả góp bằng thẻ tín dụng</li>
+                <li>Chính sách giao hàng</li>
+                <li>Chính sách khui hộp sản phẩm Apple</li>
+            </ul>
+        </div>
+        <div class="footer-service">
+            <h5>Dịch vụ và thông tin khác</h5>
+            <ul>
+                <li>Khách hàng doanh nghiệp (B2B)</li>
+                <li>Ưu đãi thanh toán</li>
+                <li>Liên hệ hợp tác kinh doanh</li>
+                <li>Tuyển dụng</li>
+            </ul>
+            <div class="footer-app">
+            <div class="footer-qr">
+                <img src="https://cdn2.cellphones.com.vn/200x,webp/media/wysiwyg/QR_appGeneral.jpg" alt="">
+            </div>
+            <div class="footer-download">
+            <img src="https://cdn2.cellphones.com.vn/200x,webp/media/wysiwyg/downloadANDROID.png" alt="">
+            <img src="https://cdn2.cellphones.com.vn/200x,webp/media/wysiwyg/downloadiOS.png" alt="">
+            </div>
+            </div>
+        </div>
+        <div class="footer-contact">
+            <h5>Kết nối với CellphoneS</h5>
+            <div class="footer-social">
+                <img src="https://cdn2.cellphones.com.vn/44x,webp/media/logo/social/cellphones-youtube.png" alt="">
+                <img src="https://cdn2.cellphones.com.vn/44x,webp/media/logo/social/cellphones-facebook.png" alt="">
+                <img src="https://cdn2.cellphones.com.vn/44x,webp/media/logo/social/cellphones-instagram.png" alt="">
+                <img src="https://cdn2.cellphones.com.vn/44x,webp/media/logo/social/cellphones-tiktok.png" alt="">
+                <img src="https://cdn2.cellphones.com.vn/44x,webp/media/logo/social/cellphones-zalo.png" alt="">
+            </div>
+            <h5>Website thành viên</h5>
+            <div class="footer-member">
+                <img src="https://cdn2.cellphones.com.vn/x30,webp/media/logo/corp-members/dienthoaivui.png" alt="">
+                <img src="https://cdn2.cellphones.com.vn/x/media/wysiwyg/Logo_CareS_1.png" alt="">
+                <img src="https://cdn2.cellphones.com.vn/x30,webp/media/logo/corp-members/schanel.png" alt="">
+                <img src="https://cdn2.cellphones.com.vn/x30,webp/media/logo/corp-members/sforum.png" alt="">
+            </div>
+        </div>
+    </div>
 </footer>
-<!-- Font Awesome Icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js"
-crossorigin="anonymous"></script>

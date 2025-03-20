@@ -232,18 +232,29 @@ quantity, price) VALUES (:order_id, :product_id, :quantity, :price)";
 
     public function updateCart()
  {
+        session_start();
+        // Đảm bảo phiên đã được khởi động
+
         if ( $_SERVER[ 'REQUEST_METHOD' ] === 'POST' ) {
             $id = $_POST[ 'id' ];
             $quantity = intval( $_POST[ 'quantity' ] );
+
+            if ( !isset( $_SESSION[ 'cart' ][ $id ] ) ) {
+                header( 'Location: /Product/cart' );
+                exit;
+            }
 
             if ( $quantity <= 0 ) {
                 unset( $_SESSION[ 'cart' ][ $id ] );
                 // Xóa sản phẩm nếu số lượng <= 0
             } else {
                 $_SESSION[ 'cart' ][ $id ][ 'quantity' ] = $quantity;
+                $_SESSION[ 'cart' ][ $id ][ 'total' ] = $_SESSION[ 'cart' ][ $id ][ 'price' ] * $quantity;
+                // Cập nhật tổng tiền
             }
 
             header( 'Location: /Product/cart' );
+            exit;
         }
     }
 
