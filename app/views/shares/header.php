@@ -476,29 +476,75 @@ button {
 <body>
 
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <h2>CellPhone S</h2>
-            </div>
-            <div class="nav-menu">
-                <ul>
-                    <li><a href="/Product"><i class="fa-solid fa-house"></i>Trang chủ</a></li>
-                </ul>
-                <div class="search">
-                    <input type="text" placeholder="Tìm kiếm..."><i class="fa-solid fa-search"></i>
-                </div>
-            </div>
-            <div class="nav-category" id="nav-category">
-                <a href="javascript:void(0);"><i class="fas fa-bars"></i></a>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="/Product/add">Thêm sản phẩm</a></li>
-                <li><a href="/Category/list">Danh sách danh mục</a></li>
-
+    <div class="nav-container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <h2>CellPhone S</h2>
+        </div>
+        
+        <!-- Main Navigation Menu -->
+        <div class="nav-menu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Product">Danh sách sản phẩm</a>
+                </li>
+                <!-- Admin Section: "Add Product" link -->
+                <!-- <?php if (SessionHelper::isAdmin()): ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Product/add">Thêm sản phẩm</a>
+                    </li>
+                <?php endif; ?> -->
+                <!-- Logout link if Logged In -->
+                <!-- <li class="nav-item">
+                    <?php
+                    if (SessionHelper::isLoggedIn()) {
+                        echo "<a class='nav-link' href='/account/logout'>Đăng xuất</a>";
+                    }
+                    ?>
+                </li> -->
             </ul>
 
+            <!-- Search Section -->
+            <div class="search">
+                <input type="text" placeholder="Tìm kiếm..."><i class="fa-solid fa-search"></i>
+            </div>
         </div>
-    </nav>
+        
+        <!-- User Login Section (display profile icon or username) -->
+        <div class="login">
+            <ul class="d-flex my-2 list-unstyled">
+                <li>
+                    <?php
+                    if (SessionHelper::isLoggedIn()) {
+                        echo "<a class='nav-link text-decoration-none text-white'>" . $_SESSION['username'] . "</a>";
+                    } else {
+                        echo "<a class='nav-link text-decoration-none list-unstyled text-white' href='/account/login'><i class='fa-regular fa-circle-user fa-2x'></i></a>";
+                    }
+                    ?>
+                </li>
+                <li>
+                    <?php
+                    if (SessionHelper::isLoggedIn()) {
+                        echo "<a class='nav-link text-decoration-none list-unstyled text-white' href='/account/logout'>Logout</a>";
+                    }
+                    ?>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Hamburger Menu (For mobile) -->
+        <div class="nav-category" id="nav-category">
+            <a href="javascript:void(0);"><i class="fas fa-bars"></i></a>
+        </div>
+        
+        <!-- Category Links (Admin accessible) -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/Product/add">Thêm sản phẩm</a></li>
+            <li><a href="/Category/list">Danh sách danh mục</a></li>
+        </ul>
+    </div>
+</nav>
+
     <div class="banner">
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">

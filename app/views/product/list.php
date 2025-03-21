@@ -25,14 +25,28 @@
 <p>Danh mục: <?php echo htmlspecialchars( $product->category_name, ENT_QUOTES, 'UTF-8' );
 ?></p>
 <div class = 'btns'>
-<a href = "/Product/edit/<?php echo $product->id; ?>" class = 'btn btn-warning'>Sửa</a>
-<a href = "/Product/delete/<?php echo $product->id; ?>" class = 'btn btn-danger' onclick = "return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">Xóa</a>
+<?php if (SessionHelper::isAdmin()): ?>
+<a href="/Product/edit/<?php echo $product->id; ?>"
+class="btn btn-warning ">
+
+<i class="fas fa-edit me-1"></i> Sửa
+</a>
+<a href="/Product/delete/<?php echo $product->id; ?>"
+class="btn btn-danger ">
+<i class="fas fa-trash me-1"></i> Xóa
+</a>
+<?php endif; ?>
+
+<!-- <a href = "/Product/edit/<?php echo $product->id; ?>" class = 'btn btn-warning'>Sửa</a>
+<a href = "/Product/delete/<?php echo $product->id; ?>" class = 'btn btn-danger' onclick = "return confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');">Xóa</a> -->
 <a href = "/Product/addToCart/<?php echo $product->id; ?>" class = 'btn btn-primary add-c'><i class = 'fa-solid fa-cart-shopping'></i></a>
 </div>
 </li>
 <?php endforeach;
 ?>
 </ul>
+
+
 
 <?php include 'app/views/shares/footer.php';
 ?>
